@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4837504516769108671}
   - component: {fileID: 7864199218535379947}
   - component: {fileID: 1001838586432479639}
-  m_Layer: 0
-  m_Name: Enemy (0)
+  m_Layer: 9
+  m_Name: EnemyBob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,3 +126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  shotCounter: 3
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  laserPrefab: {fileID: 5137835854202904027, guid: 53814488084094882ba744b65d3c1828,
+    type: 3}
+  projectileSpeed: 10

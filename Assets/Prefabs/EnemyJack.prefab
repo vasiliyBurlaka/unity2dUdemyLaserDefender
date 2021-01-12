@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -7121910436497311461}
   - component: {fileID: 6307408811885840203}
   - component: {fileID: -4582300143175364803}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyJack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,3 +126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 300
+  shotCounter: 3
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  laserPrefab: {fileID: 5137835854202904027, guid: 53814488084094882ba744b65d3c1828,
+    type: 3}
+  projectileSpeed: 10
