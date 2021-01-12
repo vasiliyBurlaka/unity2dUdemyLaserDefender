@@ -5,25 +5,30 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] List<WaveConfig> waveConfigs;
-    int startWave = 0;
+    int startingWave = 0;
     // Start is called before the first frame update
     void Start()
     {
-        WaveConfig currentWave = waveConfigs[startWave];
-        StartCoroutine(SpawnAllEnemies(currentWave));
+        StartCoroutine(SpawnAllWaves());
     }
 
-    IEnumerator SpawnAllEnemies(WaveConfig waveConfig)
+    private IEnumerator SpawnAllWaves()
     {
-        Debug.Log("SpawnAllEnemies");
+        for (int waveIndex = startingWave; waveIndex < waveConfigs.Count; waveIndex++) {
+            yield return StartCoroutine(SpawnAllEnemiesInWave(waveConfigs[waveIndex]));
+        }
+    }
+
+    private IEnumerator SpawnAllEnemiesInWave(WaveConfig waveConfig)
+    {
         for (int i = 0; i < waveConfig.GetNumberOfEnemies(); i++)
         {
-            Debug.Log("SpawnAllEnemies LOOP " + i.ToString());
-            Instantiate(
+            GameObject newEnemy = Instantiate(
                 waveConfig.GetEnemyPrefab(), 
                 waveConfig.GetWaypoints()[0].transform.position, 
                 Quaternion.identity
             );
+            newEnemy.GetComponent<EnemyPath>().SetWaveConfig(waveConfig);
 
             yield return new WaitForSeconds(waveConfig.GetTimeBetweenSpawns());
         }
