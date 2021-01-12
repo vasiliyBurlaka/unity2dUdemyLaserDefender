@@ -4,21 +4,26 @@ using UnityEngine;
 
 public class EnemyPath : MonoBehaviour
 {
-    List<Transform> waypoints;
+    [SerializeField] bool canMove = true;
+    List<Transform> waypoints = new List<Transform>();
     WaveConfig waveConfig;
     int waypointIndex = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        waypoints = waveConfig.GetWaypoints();
-        transform.position = waypoints[waypointIndex].transform.position;
+        if (waveConfig) {
+            waypoints = waveConfig.GetWaypoints();
+            transform.position = waypoints[waypointIndex].transform.position;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move();
+        if (canMove) {
+            Move();
+        }
     }
 
     public void SetWaveConfig(WaveConfig waveConfig)
