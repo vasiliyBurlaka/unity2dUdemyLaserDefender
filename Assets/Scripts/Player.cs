@@ -14,7 +14,9 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject laserPrefab;
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] float projectileFiringPeriod = 0.1f;
-
+    [SerializeField] GameObject explosionParticle;
+    [SerializeField] float explosionDuration = 2f;
+    
     Vector3 minPos;
     Vector3 maxPos;
     Coroutine fireCoroutine;
@@ -89,7 +91,15 @@ public class Player : MonoBehaviour
         health -= damageDiller.GetDamage();
         damageDiller.Hit();
         if (health <= 0) {
-            Destroy(gameObject);
+            Die();
         }
     }
+
+    private void Die()
+    {
+        GameObject explosion = Instantiate(explosionParticle, transform.position, transform.rotation);
+        Destroy(gameObject);
+        Destroy(explosion, explosionDuration);
+    }
+
 }

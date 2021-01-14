@@ -11,19 +11,11 @@ public class BackgroundSpace : MonoBehaviour
     void Start()
     {
         material = GetComponent<MeshRenderer>().material;
-        StartCoroutine(MoveTexture());
     }
 
-    IEnumerator MoveTexture()
+    void Update()
     {
-        while(true) {
-            Vector2 newOffset = new Vector2(
-                material.mainTextureOffset.x, 
-                material.mainTextureOffset.y + (moveSpeed * Time.deltaTime)
-            );
-            material.mainTextureOffset = newOffset;
-
-            yield return new WaitForEndOfFrame();
-        }
+        Vector2 newOffset = new Vector2(0, (moveSpeed * Time.deltaTime));
+        material.mainTextureOffset += newOffset;
     }
 }

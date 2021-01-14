@@ -132,3 +132,5 @@ MonoBehaviour:
   laserPrefab: {fileID: 5137835854202904027, guid: 53814488084094882ba744b65d3c1828,
     type: 3}
   projectileSpeed: 10
+  explosionParticle: {fileID: 2920152928960731535, guid: bc82426dbe59b8746972cb38e4a9a512,
+    type: 3}
