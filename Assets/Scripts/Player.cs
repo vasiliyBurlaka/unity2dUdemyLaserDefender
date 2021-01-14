@@ -17,6 +17,12 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject explosionParticle;
     [SerializeField] float explosionDuration = 2f;
     
+
+    [SerializeField] AudioClip dieSound;
+    [SerializeField] [Range(0, 1)] float dieSoundVolume = 0.7f;
+    [SerializeField] AudioClip fireSound;
+    [SerializeField] [Range(0, 1)] float fireSoundVolume = 0.2f;
+
     Vector3 minPos;
     Vector3 maxPos;
     Coroutine fireCoroutine;
@@ -56,6 +62,8 @@ public class Player : MonoBehaviour
             ) as GameObject;
 
             laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
+
+            AudioSource.PlayClipAtPoint(fireSound, Camera.main.transform.position, fireSoundVolume);
 
             yield return new WaitForSeconds(projectileFiringPeriod);
         }
@@ -97,6 +105,7 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
+        AudioSource.PlayClipAtPoint(dieSound, Camera.main.transform.position, dieSoundVolume);
         GameObject explosion = Instantiate(explosionParticle, transform.position, transform.rotation);
         Destroy(gameObject);
         Destroy(explosion, explosionDuration);

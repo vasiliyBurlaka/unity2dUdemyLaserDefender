@@ -104,6 +104,11 @@ MonoBehaviour:
   projectileFiringPeriod: 0.1
   explosionParticle: {fileID: 2920152928960731535, guid: bc82426dbe59b8746972cb38e4a9a512,
     type: 3}
+  explosionDuration: 2
+  dieSound: {fileID: 8300000, guid: b64e3589ba1930941be8532bc41d67d4, type: 3}
+  dieSoundVolume: 0.7
+  fireSound: {fileID: 8300000, guid: 1d5724da471406248a3df5a48fde0f98, type: 3}
+  fireSoundVolume: 0.2
 --- !u!60 &1678996310830939944
 PolygonCollider2D:
   m_ObjectHideFlags: 0

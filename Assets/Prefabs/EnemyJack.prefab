@@ -134,3 +134,9 @@ MonoBehaviour:
   projectileSpeed: 10
   explosionParticle: {fileID: 2920152928960731535, guid: bc82426dbe59b8746972cb38e4a9a512,
     type: 3}
+  explosionDuration: 2
+  dieSound: {fileID: 8300000, guid: b64e3589ba1930941be8532bc41d67d4, type: 3}
+  dieSoundVolume: 0.7
+  fireSounds:
+  - {fileID: 8300000, guid: 43271ed07ced3984f8970b6f17da7d4b, type: 3}
+  fireSoundVolume: 0.2
