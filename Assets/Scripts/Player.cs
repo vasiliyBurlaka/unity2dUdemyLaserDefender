@@ -109,6 +109,7 @@ public class Player : MonoBehaviour
         GameObject explosion = Instantiate(explosionParticle, transform.position, transform.rotation);
         Destroy(gameObject);
         Destroy(explosion, explosionDuration);
+        FindObjectOfType<SceneLoader>().GetComponent<SceneLoader>().LoadGameOverScene();
     }
 
 }
