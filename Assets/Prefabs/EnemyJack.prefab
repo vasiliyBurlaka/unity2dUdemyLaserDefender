@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: -7121910436497311461}
   - component: {fileID: 6307408811885840203}
   - component: {fileID: -4582300143175364803}
+  - component: {fileID: -7299651743193037647}
+  - component: {fileID: -4090325235100323922}
   m_Layer: 9
   m_Name: EnemyJack
   m_TagString: Untagged
@@ -28,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7867262637748497965}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.88, y: 3.07, z: -11.55232}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -140,3 +142,37 @@ MonoBehaviour:
   fireSounds:
   - {fileID: 8300000, guid: 43271ed07ced3984f8970b6f17da7d4b, type: 3}
   fireSoundVolume: 0.2
+--- !u!114 &-7299651743193037647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7867262637748497965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbee311221b9644fba043dddb1c975e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 300
+--- !u!50 &-4090325235100323922
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7867262637748497965}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

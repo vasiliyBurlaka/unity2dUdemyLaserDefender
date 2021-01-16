@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4837504516769108671}
   - component: {fileID: 7864199218535379947}
   - component: {fileID: 1001838586432479639}
+  - component: {fileID: 3719285732561335235}
+  - component: {fileID: -5986994382510375986}
   m_Layer: 9
   m_Name: EnemyBob
   m_TagString: Untagged
@@ -140,3 +142,37 @@ MonoBehaviour:
   fireSounds:
   - {fileID: 8300000, guid: 43271ed07ced3984f8970b6f17da7d4b, type: 3}
   fireSoundVolume: 0.2
+--- !u!114 &3719285732561335235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7864199218875987000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbee311221b9644fba043dddb1c975e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
+--- !u!50 &-5986994382510375986
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7864199218875987000}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
