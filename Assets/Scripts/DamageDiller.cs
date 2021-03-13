@@ -10,9 +10,4 @@ public class DamageDiller : MonoBehaviour
     {
         return damage;
     }
-
-    public void Hit()
-    {
-        Destroy(gameObject);
-    }
 }

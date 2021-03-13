@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    [SerializeField] int pauseBeforeLoadGameOver = 3;
+
     public void LoadGameScene() {
         SceneManager.LoadScene("LaserDefender");
     }
@@ -14,11 +16,17 @@ public class SceneLoader : MonoBehaviour
     }
 
     public void LoadGameOverScene() {
-        SceneManager.LoadScene("GameOver");
+        StartCoroutine(WaitAndLoadScene("GameOver"));
     }
 
     public void Quit()
     {
         Application.Quit();
+    }
+
+    IEnumerator WaitAndLoadScene(string SceneName = "")
+    {
+        yield return new WaitForSeconds(pauseBeforeLoadGameOver);
+        SceneManager.LoadScene(SceneName);
     }
 }

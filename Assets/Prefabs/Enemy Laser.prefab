@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 199197629419653687}
   - component: {fileID: 2498500775591507844}
   - component: {fileID: 4237106426807034340}
+  - component: {fileID: 176058601955167207}
   m_Layer: 11
   m_Name: Enemy Laser
   m_TagString: Untagged
@@ -115,7 +116,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.000000007450581, y: -0.0004349947}
@@ -134,3 +135,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
+--- !u!114 &176058601955167207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5137835854202904027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0b6174377ae0947b9d6e266607c5bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

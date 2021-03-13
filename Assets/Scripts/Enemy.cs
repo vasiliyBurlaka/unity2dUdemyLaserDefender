@@ -49,7 +49,6 @@ public class Enemy : MonoBehaviour
     private void ProcessHit(DamageDiller damageDiller)
     {
         health -= damageDiller.GetDamage();
-        damageDiller.Hit();
         if (health <= 0) {
             Die();
         }
