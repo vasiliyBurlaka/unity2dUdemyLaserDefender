@@ -5,6 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] float health = 100;
+    [SerializeField] float killPoints = 300;
+    [SerializeField] float HitPoints = 100;
     [SerializeField] float shotCounter;
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
@@ -16,6 +18,13 @@ public class Enemy : MonoBehaviour
     [SerializeField] [Range(0, 1)] float dieSoundVolume = 0.7f;
     [SerializeField] List<AudioClip> fireSounds;
     [SerializeField] [Range(0, 1)] float fireSoundVolume = 0.2f;
+    Score gameScore;
+
+
+    void Start()
+    {
+        gameScore = FindObjectOfType<Score>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -50,7 +59,10 @@ public class Enemy : MonoBehaviour
     {
         health -= damageDiller.GetDamage();
         if (health <= 0) {
+            gameScore.AddPoints(killPoints);
             Die();
+        } else {
+            gameScore.AddPoints(HitPoints);
         }
     }
 
