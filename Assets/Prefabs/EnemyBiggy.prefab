@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3719285732561335235}
   - component: {fileID: -5986994382510375986}
   m_Layer: 9
-  m_Name: EnemyBob
+  m_Name: EnemyBiggy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: -1396808795
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5fd47dd69ae84d74b88758a6ecb6dc62, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac30f94336c63fd4aaa1fd3a0001cd7b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,9 +99,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.02526784, y: -0.050534964}
   serializedVersion: 2
-  m_Radius: 0.465
+  m_Radius: 0.8549464
 --- !u!114 &7864199218535379947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,18 +127,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7d8b3592147148f2ac911198fa2dd11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  killPoints: 200
-  HitPoints: 100
-  shotCounter: 3
-  minTimeBetweenShots: 0.2
-  maxTimeBetweenShots: 3
-  laserPrefab: {fileID: 5137835854202904027, guid: 53814488084094882ba744b65d3c1828,
+  health: 1000
+  killPoints: 2000
+  HitPoints: 300
+  shotCounter: 0
+  minTimeBetweenShots: 1
+  maxTimeBetweenShots: 2
+  laserPrefab: {fileID: 5137835854202904027, guid: 4687aff69cc103047ad3916fdaa811ce,
     type: 3}
-  projectileSpeed: 10
+  projectileSpeed: 6
   explosionParticle: {fileID: 2920152928960731535, guid: bc82426dbe59b8746972cb38e4a9a512,
     type: 3}
-  explosionDuration: 2
+  explosionDuration: 4
   dieSound: {fileID: 8300000, guid: b64e3589ba1930941be8532bc41d67d4, type: 3}
   dieSoundVolume: 0.7
   fireSounds:

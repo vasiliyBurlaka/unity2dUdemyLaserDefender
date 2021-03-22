@@ -11,11 +11,12 @@ GameObject:
   - component: {fileID: 1640074269218079313}
   - component: {fileID: 163090782234813354}
   - component: {fileID: 199197629419653687}
-  - component: {fileID: 2498500775591507844}
   - component: {fileID: 4237106426807034340}
   - component: {fileID: 176058601955167207}
+  - component: {fileID: 3971710045890134579}
+  - component: {fileID: 7758551651573887694}
   m_Layer: 11
-  m_Name: Enemy Laser
+  m_Name: Enemy Big Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 1318780309
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cfb2504e2e6ae4d41b8030ae3bfa520b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 932e92c638c74d3429ee3094a5dece34, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -106,22 +107,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &2498500775591507844
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5137835854202904027}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.000000007450581, y: -0.0004349947}
-  m_Size: {x: 0.09345938, y: 0.37087}
-  m_Direction: 0
 --- !u!114 &4237106426807034340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,3 +133,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+--- !u!58 &3971710045890134579
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5137835854202904027}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.00000023841858}
+  serializedVersion: 2
+  m_Radius: 0.2102673
+--- !u!114 &7758551651573887694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5137835854202904027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4968cb2dc6fe5d45b6f40bf0931cf8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1000

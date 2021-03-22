@@ -111,4 +111,8 @@ public class Player : MonoBehaviour
         FindObjectOfType<SceneLoader>().GetComponent<SceneLoader>().LoadGameOverScene();
     }
 
+    public float GetHealth()
+    {
+        return health;
+    }
 }

@@ -9,13 +9,9 @@ public class Score : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        Debug.Log(FindObjectsOfType(GetType()).Length);
         if (FindObjectsOfType(GetType()).Length > 1) {
-            Debug.Log("OK, its not one!");
-            Debug.Log(FindObjectsOfType(GetType()).Length);
             Destroy(gameObject);
         } else {
-            Debug.Log("DontDestroyOnLoad");
             DontDestroyOnLoad(gameObject);
         }
     }
